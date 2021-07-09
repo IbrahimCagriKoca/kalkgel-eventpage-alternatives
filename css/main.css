@@ -1,0 +1,587 @@
+* {
+  box-sizing: border-box;
+}
+
+html {
+  display: flex;
+  flex: 1;
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #000000 !important;
+}
+
+html body {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  margin: 0;
+  padding: 0;
+  font-family: "Gotham", Helvetica, Arial, sans-serif;
+  background-color: #000000 !important;
+  height: 6200px;
+}
+
+body#blur.active {
+  filter: blur(20px);
+}
+
+ul {
+  list-style-type: none;
+}
+
+body header {
+  display: flex;
+  flex-direction: column;
+  flex: 21;
+  background: darkblue url("../assets/header-background.jpg") no-repeat;
+  background-size: cover;
+}
+
+header img {
+  margin-top: 50px;
+  width: 500px;
+  height: 300px;
+}
+
+header div {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  flex: 19;
+}
+
+header div div {
+  display: flex;
+  flex-direction: row;
+  height: 100px;
+  flex: 3;
+}
+
+#get-code {
+  color: white;
+  background: none;
+  flex: 5;
+}
+
+#get-code:hover {
+  color: black;
+  background: #fdd301;
+  box-shadow: 0 0 0 #fdd301;
+}
+
+header div button {
+  width: 200px;
+  height: 55px;
+  background-color: #fdd301;
+  border: #fdd301 solid 1px;
+  font-size: 18px;
+  margin: 30px;
+}
+
+header div button:active {
+  outline: none;
+}
+
+header div button:hover {
+  border: solid #fdd301 4px;
+  border-color: #fdd301;
+  box-shadow: 0 0 20px #fdd301;
+  outline: none;
+}
+
+#container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  flex: 80;
+}
+
+#container #video-div {
+  margin-top: 150px;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  align-items: center;
+}
+
+#container #video-div div {
+  display: flex;
+  width: 67%;
+  justify-content: flex-end;
+}
+
+#container #video-div div button {
+  width: 65px;
+  height: 65px;
+  background-color: #fdd301;
+  border: 0;
+  outline: none;
+  border-radius: 0;
+  color: black;
+  font-size: 20px;
+}
+
+#container #video-div div button:focus {
+  box-shadow: none;
+}
+
+#container #video-div div button:hover {
+  color: white;
+}
+
+#container #video-div img {
+  width: 60%;
+  height: 500px;
+}
+
+.modal-body #video {
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  outline: none;
+}
+
+.modal .modal-dialog {
+  width: 66%;
+  margin-left: 21.5%;
+}
+
+.modal-dialog .modal-content .modal-body {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: black;
+  width: 1165px;
+  height: 600px;
+  margin: 0;
+  padding: 0;
+}
+
+source {
+  margin: 0;
+  padding: 0;
+}
+
+#influencers {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 150px;
+}
+
+#influencers div {
+  display: flex;
+  width: 100%;
+  height: 400px;
+  flex-direction: row;
+}
+
+#influencers div div {
+  width: 20%;
+}
+
+#influencers div div img {
+  width: 20%;
+}
+
+#influencers div div:hover div {
+  box-shadow: inset -92px 13px 300px 5px #fdd301;
+  transition: box-shadow 500ms;
+}
+
+#influencers div div:hover .social-media .fab {
+  visibility: visible;
+  opacity: 1;
+}
+
+#influencers div div:hover .social-media .fa-facebook-f {
+  visibility: visible;
+  opacity: 1;
+  transition: visibility 0s linear 0s, opacity 500ms;
+}
+
+#influencers div div:hover .social-media .fa-youtube {
+  visibility: visible;
+  opacity: 1;
+  transition: visibility 0s linear 0s, opacity 1000ms;
+}
+
+#influencers div div:hover .social-media .fa-twitch {
+  visibility: visible;
+  opacity: 1;
+  transition: visibility 0s linear 0s, opacity 1500ms;
+}
+
+#influencers div div:hover .social-media .fa-instagram {
+  visibility: visible;
+  opacity: 1;
+  transition: visibility 0s linear 0s, opacity 2000ms;
+}
+
+#influencers div div:hover .social-media .fa-twitter {
+  visibility: visible;
+  opacity: 1;
+  transition: visibility 0s linear 0s, opacity 2500ms;
+}
+
+#influencers div div:hover img {
+  transform: translateX(50px);
+  transition: transform 500ms;
+}
+
+#influencers div .social-media .fab {
+  display: flex;
+  visibility: hidden;
+  opacity: 0;
+  transition: visibility 0s linear 300ms, opacity 300ms;
+}
+
+#influencers .influencer {
+  overflow-x: hidden;
+}
+
+#influencers .influencer img {
+  position: relative;
+  margin-left: -50px;
+  width: 120%;
+  height: 100%;
+  filter: grayscale(60%);
+}
+
+#influencers div .top-left {
+  display: flex;
+  flex-direction: column;
+  position: absolute;
+  z-index: 1000;
+  color: #fdd301;
+  font-family: Arial;
+  font-size: 20px;
+  margin: 0;
+}
+
+.top-left p {
+  margin: 0;
+  margin-top: 5px;
+  margin-left: 10px;
+  text-shadow: 2px 2px 8px #000000;
+}
+
+.top-left h2 {
+  color: white;
+  margin: 0;
+  margin-left: 10px;
+  text-shadow: 3px 3px 9px #000000;
+}
+
+.social-media {
+  display: flex;
+  align-items: flex-end;
+  position: absolute;
+  z-index: 1000;
+  color: #fdd301;
+  font-size: 20px;
+}
+
+.social-media i {
+  margin: 10px;
+  margin-left: 20px;
+  margin-bottom: 15px;
+}
+
+.title {
+  color: white;
+  text-shadow: 3px 3px 9px #000000;
+  font-size: 45px;
+  font-weight: 100;
+  margin-bottom: 30px;
+}
+
+#about-us {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  color: white;
+  width: 60%;
+  margin-top: 150px;
+}
+
+#about-us div {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  width: 100%;
+  margin-top: 20px;
+}
+
+#first-div {
+  display: flex;
+  align-items: center;
+  background-color: #000000;
+}
+
+#second-div {
+  background-color: #fdd301;
+}
+
+#third-div {
+  background-color: #085F63;
+}
+
+#fourth-div {
+  background-color: #ffffff;
+}
+
+#fifth-div {
+  background-color: #1abc9c;
+}
+
+#about-us div .one-box {
+  width: 32%;
+  height: 300px;
+}
+
+#about-us div .two-box {
+  width: 66%;
+  height: 300px;
+}
+
+#about-us p {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+#next-event {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 150px;
+  width: 60%;
+}
+
+#next-event table {
+  width: 100%;
+}
+
+#next-event div {
+  width: 100%;
+}
+
+#next-event div div {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  height: 70px;
+  color: white;
+  padding-left: 60px;
+}
+
+#next-event div div div {
+  font-size: 24px;
+  width: 25%;
+}
+
+#our-sponsors {
+  width: 60%;
+}
+
+#our-sponsors div {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.sponsor {
+  width: 23%;
+  height: 120px;
+  background-color: #085F63;
+}
+
+html body footer {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  height: 80px;
+  opacity: 0.8;
+  background-color: #1d1d1c;
+  color: white;
+}
+
+footer div {
+  display: flex;
+}
+
+.iletişim h1 {
+  margin: 30px;
+  font-size: 10px;
+}
+
+.kalkgelkuralları h1 {
+  margin: 30px;
+  font-size: 10px;
+}
+
+.logo img {
+  width: 50px;
+  height: 20px;
+}
+
+.net {
+  padding-right: 30px;
+  font-size: 20px;
+  margin-right: 50px;
+}
+
+.net span {
+  font-size: 13px;
+}
+
+.net i {
+  margin-left: 20px;
+}
+
+#sponsor {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  flex: 9;
+  color: white;
+}
+
+#sponsor h2 {
+  margin: 30px;
+}
+
+.sponsors {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  color: white;
+}
+
+#sponsors div img {
+  background: white;
+  width: 200px;
+  height: 200px;
+  margin: 20px;
+  border: solid 1px #fdd301;
+  border-color: #fdd301;
+  box-shadow: 0 0 30px #fdd301;
+}
+
+#sponsors div div .gold {
+  border: solid 1px white;
+  border-color: white;
+  box-shadow: 0 0 15px white;
+}
+
+#sponsors div div .silver {
+  border: solid 1px white;
+  border-color: white;
+  box-shadow: 0 0 0 white;
+}
+
+#sponsors div h2 {
+  font-size: 30px;
+  margin: 10px;
+}
+
+#location {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  margin-top: 100px;
+}
+
+#location iframe {
+  margin-top: 30px;
+  filter: invert(100%);
+}
+
+.modal {
+  display: none;
+  /* Hidden by default */
+  position: fixed;
+  /* Stay in place */
+  z-index: 1;
+  /* Sit on top */
+  left: 0;
+  top: 0;
+  width: 100%;
+  /* Full width */
+  height: 100%;
+  /* Full height */
+  overflow: auto;
+  /* Enable scroll if needed */
+  background-color: rgb(0, 0, 0);
+  /* Fallback color */
+  background-color: rgba(0, 0, 0, 0.4);
+  /* Black w/ opacity */
+}
+
+/* Modal Content/Box */
+
+.js-modal-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: #000000;
+  margin: 5% auto;
+  /* 5% from the top and centered */
+  padding: 20px;
+  border: 1px solid #1d1d1c;
+  border-radius: 10px;
+  min-height: 500px;
+  width: 60%;
+  /* Could be more or less, depending on screen size */
+  color: white;
+}
+
+/* Modal Content/Box */
+
+.js-gallery-modal-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: #000000;
+  margin: 5% auto;
+  /* 5% from the top and centered */
+  width: 60%;
+  /* Could be more or less, depending on screen size */
+  color: white;
+}
+
+.js-gallery-modal-content video {
+  width: 100%;
+  outline: none;
+}
+
+.js-modal-content h2 {
+  color: #fdd301;
+  font-size: 24px;
+  font-weight: 600;
+  margin: 10px;
+}
+
+/* The Close Button */
+
+.close {
+  display: none;
+  color: #aaa;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+}
+
+.close:hover, .close:focus {
+  color: black;
+  text-decoration: none;
+  cursor: pointer;
+}

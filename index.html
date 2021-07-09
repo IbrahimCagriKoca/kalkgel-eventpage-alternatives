@@ -1,0 +1,343 @@
+<!DOCTYPE html>
+<html lang="">
+
+<head>
+    <title>#kalkgel</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="css/main.css">
+    <script src="https://kit.fontawesome.com/6553ae8a55.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+        integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+</head>
+
+<body id="blur">
+    <header>
+
+        <div>
+            <div>
+                <img src="./assets/logo.png" alt="logo">
+            </div>
+            <div>
+                <button onclick="getTicket()">Get Tickets</button>
+                <button id="get-code"><a href="./alternate.html">See alternate version</a></button>
+            </div>
+        </div>
+    </header>
+    <div id="container">
+        <div id="video-div">
+            <p class="title">LAST EVENT</p>
+            <div>
+                <button id="gallery-button">
+                    <i class="far fa-play-circle"></i>
+                </button>
+            </div>
+            <img src="./assets/video-background.jpg" alt="">
+        </div>
+        <div id="gallery-modal" class="modal hide">
+            <div class="js-gallery-modal-content">
+                <span id="gallery-close" class="close">&times;</span>
+                <video id="last-event-video" controls>
+                    <source src="./assets/eylul-2019.mkv" type="video/mp4">
+                </video>
+            </div>
+        </div>
+
+        <div id="influencers">
+            <p class="title">MEET OUR TEAM</p>
+            <div>
+                <div class="influencer" id="cs">
+                    <div class="top-left">
+                        <h2>Can Sungur</h2>
+                    </div>
+                    <img src="./assets/CS.jfif" alt="cs">
+                    <div class="social-media">
+                        <i class="fab fa-facebook-f" onclick="csFacebook()"></i>
+                        <i class="fab fa-youtube" onclick="csYoutube()"></i>
+                        <i class="fab fa-twitch" onclick="csTwitch()"></i>
+                        <i class="fab fa-instagram" onclick="csInstagram()"></i>
+                        <i class="fab fa-twitter" onclick="csTwitter()"></i>
+                    </div>
+                </div>
+                <div class="influencer" id="panda">
+                    <div class="top-left">
+                        <p>PintiPanda</p>
+                        <h2>Tuna Akşen</h2>
+                    </div>
+                    <div class="social-media">
+                        <i class="fab fa-facebook-f" onclick="pandaFacebook()"></i>
+                        <i class="fab fa-youtube" onclick="pandaYoutube()"></i>
+                        <i class="fab fa-twitch" onclick="pandaTwitch()"></i>
+                        <i class="fab fa-instagram" onclick="pandaInstagram()"></i>
+                        <i class="fab fa-twitter" onclick="pandaTwitter()"></i>
+                    </div>
+                    <img src="./assets/panda.jpg" alt="panda">
+                </div>
+                <div class="influencer" id="mete">
+                    <div class="top-left">
+                        <p>Easter Gamers</p>
+                        <h2>Mete Özbey</h2>
+                    </div>
+                    <div class="social-media">
+                        <i class="fab fa-facebook-f" onclick="meteFacebook()"></i>
+                        <i class="fab fa-youtube" onclick="meteYoutube()"></i>
+                        <i class="fab fa-twitch" onclick="meteTwitch()"></i>
+                        <i class="fab fa-instagram" onclick="meteInstagram()"></i>
+                        <i class="fab fa-twitter" onclick="meteTwitter()"></i>
+                    </div>
+                    <img src="./assets/mete.jpg" alt="mete">
+                </div>
+                <div class="influencer" id="pelin">
+                    <div class="top-left">
+                        <p>Pqueen</p>
+                        <h2>Pelin Baynazoğlu</h2>
+                    </div>
+                    <div class="social-media">
+                        <i class="fab fa-twitch" onclick="pelinTwitch()"></i>
+                        <i class="fab fa-youtube" onclick="pelinYoutube()"></i>
+                        <i class="fab fa-instagram" onclick="pelinInstagram()"></i>
+                        <i class="fab fa-twitter" onclick="pelinTwitter()"></i>
+                    </div>
+                    <img src="./assets/pqeen.jpg" alt="pqueen">
+                </div>
+                <div class="influencer" id="gunhan">
+                    <div class="top-left">
+                        <h2>Mert Günhan</h2>
+                    </div>
+                    <div class="social-media">
+                        <i class="fab fa-twitch" onclick="gunhanTwitch()"></i>
+                        <i class="fab fa-youtube" onclick="gunhanYoutube()"></i>
+                        <i class="fab fa-instagram" onclick="gunhanInstagram()"></i>
+                        <i class="fab fa-twitter" onclick="gunhanTwitter()"></i>
+                    </div>
+                    <img src="./assets/gunhan.jpg" alt="gunhan">
+                </div>
+            </div>
+            <div class="influencer" id="turgut">
+                <div>
+                    <div class="top-left">
+                        <h2>Tugut Uç</h2>
+                    </div>
+                    <div class="social-media">
+                        <i class="fab fa-twitch" onclick="turgutTwitch()"></i>
+                        <i class="fab fa-youtube" onclick="turgutYoutube()"></i>
+                        <i class="fab fa-instagram" onclick="turgutInstagram()"></i>
+                        <i class="fab fa-twitter" onclick="turgutTwitter()"></i>
+                    </div>
+                    <img src="./assets/turgut.jpg" alt="turgut">
+                </div>
+                <div class="influencer" id="tancan">
+                    <div class="top-left">
+                        <p>Tancan</p>
+                        <h2>Tancan Fümen</h2>
+                    </div>
+                    <div class="social-media">
+                        <i class="fab fa-twitch" onclick="tancanTwitch()"></i>
+                        <i class="fab fa-youtube" onclick="tancanYoutube()"></i>
+                        <i class="fab fa-instagram" onclick="tancanInstagram()"></i>
+                        <i class="fab fa-twitter" onclick="tancanTwitter()"></i>
+                    </div>
+                    <img src="./assets/tancan.jpg" alt="tancan">
+                </div>
+                <div class="influencer" id="qua">
+                    <div class="top-left">
+                        <p>Quanaril</p>
+                        <h2>Can Kızılgüneşler</h2>
+                    </div>
+                    <div class="social-media">
+                        <i class="fab fa-twitch" onclick="quaTwitch()"></i>
+                        <i class="fab fa-youtube" onclick="quaYoutube()"></i>
+                        <i class="fab fa-instagram" onclick="quaInstagram()"></i>
+                        <i class="fab fa-twitter" onclick="quaTwitter()"></i>
+                    </div>
+                    <img src="./assets/qua.jpg" alt="qua">
+
+                </div>
+                <div class="influencer" id="bosluk">
+                    <div class="top-left">
+                        <p>Boşluk</p>
+                        <h2>İlker Öncü</h2>
+                    </div>
+                    <div class="social-media">
+                        <i class="fab fa-twitch" onclick="boslukTwitch()"></i>
+                        <i class="fab fa-youtube" onclick="boslukYoutube()"></i>
+                        <i class="fab fa-instagram" onclick="boslukInstagram()"></i>
+                        <i class="fab fa-twitter" onclick="boslukTwitter()"></i>
+                    </div>
+                    <img src="./assets/bosluk.jpg" alt="bosluk">
+                </div>
+                <div class="influencer">
+                    <div class="top-left">
+                        <p>Acemi_Filozof</p>
+                        <h2>Ceren Sungur</h2>
+                    </div>
+                    <div class="social-media" id="ceren-sungur">
+                        <i class="fab fa-twitch" onclick="cerenTwitch()"></i>
+                        <i class="fab fa-youtube" onclick="cerenYoutube()"></i>
+                        <i class="fab fa-instagram" onclick="cerenInstagram()"></i>
+                        <i class="fab fa-twitter" onclick="cerenTwitter()"></i>
+                    </div>
+                    <img src="./assets/ceren-sungur.jpg" alt="ceren-sungur">
+                </div>
+            </div>
+        </div>
+        <div id="about-us">
+            <div>
+                <div class="one-box" id="first-div">
+                    <p class="title">WHAT IS KALKGEL
+                    <p>
+                </div>
+                <div class="two-box" id="second-div">
+                    <p>Meet Your Favorite Influencers
+                    <p>
+                </div>
+            </div>
+            <div>
+                <div class="one-box" id="third-div">
+
+                </div>
+                <div class="one-box" id="fourth-div">
+
+                </div>
+                <div class="one-box" id="fifth-div">
+
+                </div>
+            </div>
+        </div>
+        <div id="next-event">
+            <p class="title">OUR EVENTS</p>
+            <div>
+                <div style="background-color: #101010;">
+                    <div style="font-size: 18px;">Feb.15, Zorlu PSM</div>
+                    <div style="font-size: 16px;color: gray;margin-left: 50px;">12.00-18.00</div>
+                    <div style="font-size: 18px;color: #fdd301;">Sky Lounge</div>
+                    <div style="font-size: 13px;font-weight: 900;" onclick="getTicket()">BUY NOW</div>
+                </div>
+                <div>
+                    <div style="font-size: 18px;">Dec.14, Zorlu PSM</div>
+                    <div style="font-size: 16px;color: gray;margin-left: 50px;">12.00-18.00</div>
+                    <div style="font-size: 18px;color: #fdd301;">Sky Lounge</div>
+                    <div class="past-event" style="font-size: 13px;font-weight: 900;">
+                        <p>PAST EVENT</p>
+                    </div>
+                </div>
+                <div style="background-color: #101010;">
+                    <div style="font-size: 18px;">Oct.19, Zorlu PSM</div>
+                    <div style="font-size: 16px;color: gray;margin-left: 50px;">12.00-18.00</div>
+                    <div style="font-size: 18px;color: #fdd301;">Sky Lounge</div>
+                    <div class="past-event" style="font-size: 13px;font-weight: 900;">
+                        <p>PAST EVENT</p>
+                    </div>
+                </div>
+                <div>
+                    <div style="font-size: 18px;">Sep.28, Zorlu PSM</div>
+                    <div style="font-size: 16px;color: gray;margin-left: 50px;">12.00-18.00</div>
+                    <div style="font-size: 18px;color: #fdd301;">Turkcell Stage</div>
+                    <div class="past-event" style="font-size: 13px;font-weight: 900;">
+                        <p>PAST EVENT</p>
+                    </div>
+                </div>
+                <div style="background-color: #101010;">
+                    <div style="font-size: 18px;">Aug.31, Zorlu PSM</div>
+                    <div style="font-size: 16px;color: gray;margin-left: 50px;">12.00-18.00</div>
+                    <div style="font-size: 18px;color: #fdd301;">Sky Lounge</div>
+                    <div class="past-event" style="font-size: 13px;font-weight: 900;">
+                        <p>PAST EVENT</p>
+                    </div>
+                </div>
+                <div>
+                    <div style="font-size: 18px;">Jul.20, Zorlu PSM</div>
+                    <div style="font-size: 16px;color: gray;margin-left: 50px;">12.00-18.00</div>
+                    <div style="font-size: 18px;color: #fdd301;">Sky Lounge</div>
+                    <div class="past-event" style="font-size: 13px;font-weight: 900;">
+                        <p>PAST EVENT</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div id="sponsor">
+            <h2 class="title">SPONSORS</h2>
+            <div id="sponsors">
+                <div class="sponsors main-sponsor">
+                    <h2>Main Sponsors</h2>
+                    <img src="./assets/ps-tr.jpg" alt="#">
+                </div>
+                <div class="sponsors gold-sponsors">
+                    <h2>Gold Sponsors</h2>
+                    <div>
+                        <img class="gold" src="./assets/asus-tr.jpeg" alt="#">
+                        <img class="gold" src="./assets/itopya.png" alt="#">
+                        <img class="gold" src="./assets/asus-tr.jpeg" alt="#">
+                    </div>
+                </div>
+                <div class="sponsors silver-sponsors">
+                    <h2>Silver Sponsors</h2>
+                    <div>
+                        <img class="silver" src="./assets/nvidia-tr.jpg" alt="#">
+                        <img class="silver" src="./assets/seagate-tr.png" alt="#">
+                        <img class="silver" src="./assets/nvidia-tr.jpg" alt="#">
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div id="location">
+            <h2 class="title">LOCATION</h2>
+            <iframe
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d8508.134842700154!2d29.011672673181796!3d41.067245635405804!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x14cab645fb9fd1a5%3A0x272558825cc8e0dd!2sZorlu%20Performans%20Sanatlar%C4%B1%20Merkezi!5e0!3m2!1str!2str!4v1580978128492!5m2!1str!2str"
+                width="1200" height="600" frameborder="0" style="border:0;" allowfullscreen=""></iframe>
+        </div>
+    </div>
+    <footer>
+        <div>
+            <div class="iletişim">
+                <h1 id="reach-us">REACH US</h1>
+
+            </div>
+
+            <div class="kalkgelkuralları">
+                <h1 id="rules">RULES</h1>
+            </div>
+        </div>
+        <div class="logo">
+            <img src="./assets/logo.png" alt="#">
+        </div>
+
+        <div class="net">
+            <span>Follow Us :</span>
+            <i class="fab fa-youtube" onclick="kalkgelYoutube()"></i>
+            <i class="fab fa-instagram" onclick="kalkgelInstagram()"></i>
+            <i class="fab fa-twitter" onclick="kalkgelTwitter()"></i>
+            <i class="fab fa-facebook-f" onclick="kalkgelFacebook()"></i>
+        </div>
+    </footer>
+    <div id="reach-us-modal" class="modal">
+        <div class="js-modal-content">
+            <span id="reach-close" class="close">&times;</span>
+            <h2>Reach Us</h2>
+            <p>Some text in the Modal..</p>
+        </div>
+
+    </div>
+
+    <div id="rules-modal" class="modal">
+        <div class="js-modal-content">
+            <span id="rules-close" class="close">&times;</span>
+            <h2>Rules</h2>
+            <p>Some text in the Modal..</p>
+        </div>
+
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
+        integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+        integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
+        integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
+        crossorigin="anonymous"></script>
+    <script src="./js/main.js"></script>
+</body>
+
+</html>
